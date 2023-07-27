@@ -117,16 +117,10 @@
           window.location.href = `/custom?name=${name}`;
         }
       });
-      document.querySelectorAll(".umami").forEach(el => {
-        el.addEventListener("click", () => {
-          umami(el.dataset.eventName);
-        });
-      });
       if (window.location.search === "?nolinktree") {
         document.querySelector(".linktree").outerHTML = "francesco rosi";
         window.history.pushState({}, document.title, window.location.pathname);
       }
     </script>
-    <script async defer data-website-id="33e78996-7f53-4a2b-ae7d-b124034035bc" src="https://umami-zeta-ten.vercel.app/umami.js"></script>
   </body>
 </html>
