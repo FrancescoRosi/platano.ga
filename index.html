@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: "IBM Plex Mono";
+            src: url(IBM-PLEX-MONO-V19-LATIN-REGULAR.OTF);
+        }
+        @font-face {
+            font-family: "IBM Plex Mono Bold";
+            src: url(IBM-PLEX-MONO-V19-LATIN-700.OTF);
+        }
+        @font-face {
+            font-family: "Nohemi";
+            src: url(NOHEMI-VF.TTF);
+        }
+        .hidden {
+            display: none !important;
+        }
+        html, body {
+            pointer-events: none;
+            user-select: none;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: 100%;
+            background: black;
+            color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        body {
+            padding: 1rem;
+        }
+        img {
+            width: 75%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .count {
+            font-size: 3rem;
+            font-weight: 900;
+            font-family: "IBM Plex Mono Bold";
+        }
+        .text {
+            font-size: 1rem;
+            font-family: "Nohemi";
+        }
+        #countdown {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #countdown > div:not(.comma) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .comma {
+            display: flex;
+            align-items: center;
+            font-family: "IBM Plex Mono";
+            font-size: 2rem;
+        }
+    </style>
+    <title>platano (.ga)</title>
+</head>
+<body>
+    <img src="platano.png" alt="platano">
+    <div id="countdown" class="hidden">
+        <div id="months">
+            <div class="count">00</div>
+            <div class="text">mesi</div>
+        </div>
+        <div class="comma">:</div>
+        <div id="days">
+            <div class="count">00</div>
+            <div class="text">giorni</div>
+        </div>
+        <div class="comma">:</div>
+        <div id="hours">
+            <div class="count">00</div>
+            <div class="text">ore</div>
+        </div>
+        <div class="comma">:</div>
+        <div id="minutes">
+            <div class="count">00</div>
+            <div class="text">minuti</div>
+        </div>
+        <div class="comma">:</div>
+        <div id="seconds">
+            <div class="count">00</div>
+            <div class="text">secondi</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js" integrity="sha512-dUlSLLkxslGILhPdCkALwk4szPhp3xmZIKFtlUD+O9Lslq41Aksmdt5OGqpomDoT4FsCUH70jQU8ezZHI3v1RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const end = luxon.DateTime.fromISO("2024-06-15T18:14:54.367301Z");
+
+        setTimeout(() => {
+            document.querySelector("#countdown").classList.remove("hidden");
+        }, 1000);
+        setInterval(() => {
+            const now = luxon.DateTime.now()
+            remaining = end.diff(now)
+            const formatted = remaining.toFormat(`MM dd hh mm ss`).split(" ");
+            document.querySelectorAll(".count").forEach((el, i) => {
+                el.innerText = formatted[i];
+            });
+        }, 1000);
+    </script>
+</body>
+</html>
