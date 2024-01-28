@@ -1,148 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      html {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-      }
-      body {
-        max-width: 100vw;
-      }
-      img {
-        width: 100%;
-      }
-      *:not(i) {
-        font-family: "Inter", sans-serif;
-      }
-      a {
-        font-weight: 700;
-      }
-      a, span {
-        color: #292929;
-        opacity: .7;
-      }
-      .toptext {
-        font-size: 3rem;
-        font-weight: bold;
-      }
-      .bottomtext {
-        font-size: 2rem;
-      }
-      .hidden {
-        display: none;
-      }
-      div {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
-      @media (prefers-color-scheme: dark) {
-        html {
-          background-color: black;
-          color: white;
-        }
-        a, span {
-          color: #d6d6d6;
-        }
-      }
-    </style>
-    <title>platano (.ga)</title>
-  </head>
-  <body>
-    <span class="toptext"></span>
-    <br>
-    <img src="platano.png" alt="platano" width="631">
-    <br>
-    <span class="bottomtext"></span>
-    <br class="hidden">
-    <span class="footer">
-      made by <a target="_blank" href="https://linktr.ee/francescorosi">francesco rosi</a>
-      <br>
-      <a target="_blank" href="https://replit.com/@FrancescoRosi/platanoga" class="umami source-code" data-event-name="source code (english)">source code</a>
-      <br>
-      <a class="customplatanolink" href="#">create a custom platano page</a>
-      <br>
-      <div class="hidden">
-        <input type="text" placeholder="platano name">
-        <input type="checkbox"> is special? 
-        <button class="umami create-btn" data-event-name="custom platano page (english)">create</button>
-      </div>
-      <a href="https://href.li/?https://platano.ga/video" class="umami video-link" data-event-name="video (english)">watch the very newest platano video at platano.ga/video</a>
-      <br>
-      <a href="https://tiktok.com/@platano.ga" target="_blank" class="umami tiktok-link" data-event-name="tiktok profile (english)">follow platano.ga's tiktok profile</a>
-      <span title="on this profile, i post cringe videos, all just to promote my site. please understand; this is the only way i can promote my stuff on tiktok."> (warning: cringe)</span>
-      <br>
-      <a href="https://umami-zeta-ten.vercel.app/share/FGvAac9d/platano.ga" target="_blank" class="umami analytics-link" data-event-name="public analytics link (english)">see platano.ga's public analytics</a>
-       (no sensitive data here :D)
-      <br>
-      <a target="_blank" href="/crypto" class="umami crypto-donate-link" data-event-name="crypto donate link (english)">donate to me with crypto</a>
-      <br>
-      and, more importantly, <a target="_blank" href="https://donate.unhcr.org/int/en/ukraine-emergency" class="umami ukraine-donate-link" data-event-name="ukraine donate link (english)">donate to the unhcr to help people in ukraine</a>
-    </span>
-    <script>
-      if (navigator.language.startsWith("it")) {
-        document.querySelector(".footer").innerHTML = `creato da <a target="_blank" href="https://linktr.ee/francescorosi" class="umami linktree" data-event-name="linktree (italiano)">francesco rosi</a>
-        <br>
-        <a target="_blank" href="https://replit.com/@FrancescoRosi/platanoga" class="umami source-code" data-event-link="codice sorgente (italiano)">codice sorgente</a>
-        <br>
-        <a href="https://href.li/?https://platano.ga/video" class="umami video-link" data-event-link="video (italiano)">guarda il nuovissimo video platano su platano.ga/video</a>
-        <br>
-        <a href="https://tiktok.com/@platano.ga" target="_blank" class="umami tiktok-link" data-event-link="profilo tiktok (italiano)">segui il profilo tiktok di platano.ga</a>
-        <span title="su questo profilo, posto video cringe, tutto solamente per promuovere il mio sito. per favore capisci; questo è l'unico modo per promuovere la mia roba su tiktok."> (attenzione: cringe)</span>
-        <br>
-        <a href="https://umami-zeta-ten.vercel.app/share/FGvAac9d/platano.ga" target="_blank" class="umami analytics-link" data-event-name="link analitiche pubbliche (italiano)">guarda le analitiche pubbliche di platano.ga</a>
-         (niente dati sensibili qui :D)
-        <br>
-        <a target="_blank" href="/crypto" class="umami crypto-donate-link" data-event-name="link donazione crypto (italiano)">donami con criptovalute</a>
-        <br>
-        e, soprattutto, <a target="_blank" href="https://donate.unhcr.org/int/en/ukraine-emergency" class="umami ukraine-donate-link" data-event-name="link donazione ucraina (italiano)">dona all'unhcr per aiutare le persone in ucraina</a>`
-      }
-      if (new URLSearchParams(window.location.search).get("name") != null && new URLSearchParams(window.location.search).get("name") != "") {
-        if (navigator.language.startsWith("it")) {
-          document.querySelector(".toptext").innerText = `${new URLSearchParams(window.location.search).get("name").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', '&quot;')} è un`;
-        } else {
-          document.querySelector(".toptext").innerText = `${new URLSearchParams(window.location.search).get("name").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', '&quot;')} is a`;
-        }
-      } else {
-        if (navigator.language.startsWith("it")) {
-          document.querySelector(".toptext").innerText = "TU sei un platano (non hai messo un nome perché sei platano oppure hai rimosso il nome dagli argomenti nell'url perché sei un doppio platano oppure hai visitato questa pagina manualmente senza argomenti, in quel caso sei triplo platano)";
-        } else {
-          document.querySelector(".toptext").innerText = "YOU are a platano (you didn't enter a name because you are a platano or you removed the name from the arguments in the url because you are a double platano or you manually visited this page with no arguments: in that case you are triple platano)";
-        }
-      }
-      if (new URLSearchParams(window.location.search).get("special") != null) {
-        document.querySelector(".hidden").classList.remove("hidden");
-        if (navigator.language.startsWith("it")) {
-          document.querySelector(".bottomtext").innerText = "(e speciale)";
-        } else {
-          document.querySelector(".bottomtext").innerText = "(and special)";
-        }
-      }
-      document.querySelector(".customplatanolink").addEventListener("click", () => {
-        document.querySelector("div").classList.remove("hidden");
-      });
-      document.querySelector("button").addEventListener("click", () => {
-        if (document.querySelector("input[type=\"text\"]").value != null) {
-          name = document.querySelector("input[type=\"text\"]").value;
-        }
-        if (document.querySelector("input[type=\"checkbox\"]").checked) {
-          window.location.href = `/custom?name=${name}&special`;
-        } else {
-          window.location.href = `/custom?name=${name}`;
-        }
-      });
-      document.querySelectorAll(".umami").forEach(el => {
-        el.addEventListener("click", () => {
-          umami(el.dataset.eventName);
-        });
-      });
-    </script>
-    <script async defer data-website-id="33e78996-7f53-4a2b-ae7d-b124034035bc" src="https://umami-zeta-ten.vercel.app/umami.js"></script>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>platano (.ga)</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Inter:400,500,600,700);
+            * {
+                font-family: "Inter", sans-serif;
+            }
+            html, body {
+                overflow: hidden;
+                height: 100%;
+            }
+            a {
+                font-weight: 400;
+                transition: .25s font-weight ease;
+                text-decoration: underline;
+            }
+            .vercel {
+                position: absolute;
+                bottom: 1rem;
+            }
+            .vercel img {
+                height: 48px;
+            }
+        </style>
+    </head>
+    <body class="has-background-black is-flex is-justify-content-center is-align-items-center px-5 py-6">
+        <div class="has-text-centered is-flex is-flex-direction-column">
+            <h1 class="title has-text-white is-size-2">{{ message }}</h1>
+            <img src="platano.png" alt="banana">
+            <a href="/" class="has-text-white mt-5">ritorna alla home</a>
+        </div>
+        <a class="vercel" href="https://vercel.com" target="_blank"><img src="/vercel.svg" alt="powered by vercel"></a>
+    </body>
 </html>

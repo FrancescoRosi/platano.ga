@@ -1,126 +1,127 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="banana, platano, banana.ga, platano.ga, fruit, fruits, platano.com">
-    <meta name="description" content="the most recognizable platano on the internet">
-    <meta name="author" content="Francesco Rosi">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      html {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-      }
-      img {
-        width: 100%;
-        max-width: 631px;
-      }
-      *:not(i) {
-        font-family: "Inter", sans-serif;
-      }
-      a {
-        font-weight: 700;
-      }
-      a, span {
-        color: #292929;
-        opacity: 0.7;
-      }
-      .hidden {
-        display: none;
-      }
-      div {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
-      @media (prefers-color-scheme: dark) {
-        html {
-          background-color: black;
-          color: white;
-        }
-        a, span {
-          color: #d6d6d6;
-        }
-      }
-    </style>
-    <title>platano (.ga)</title>
-  </head>
-  <body>
-    <img src="platano.png" alt="platano" width="631">
-    <br>
-    <span class="footer">
-      made by <a target="_blank" href="https://linktr.ee/francescorosi" class="umami linktree" data-event-name="linktree (english)">francesco rosi</a>
-      <br>
-      <a target="_blank" href="https://replit.com/@FrancescoRosi/platanoga" class="umami source-code" data-event-name="source code (english)">source code</a>
-      <br>
-      <a class="customplatanolink" href="#">create a custom platano page</a>
-      <br>
-      <div class="hidden">
-        <input type="text" placeholder="platano name">
-        <input type="checkbox"> is special? 
-        <button class="umami create-btn" data-event-name="custom platano page (english)">create</button>
-      </div>
-      <a href="https://href.li/?https://platano.ga/video" class="umami video-link" data-event-name="video (english)">watch the very newest platano video at platano.ga/video</a>
-      <br>
-      <a href="https://tiktok.com/@platano.ga" target="_blank" class="umami tiktok-link" data-event-name="tiktok profile (english)">follow platano.ga's tiktok profile</a>
-      <span title="on this profile, i post cringe videos, all just to promote my site. please understand; this is the only way i can promote my stuff on tiktok."> (warning: cringe)</span>
-      <br>
-      <a href="https://umami-zeta-ten.vercel.app/share/FGvAac9d/platano.ga" target="_blank" class="umami analytics-link" data-event-name="public analytics link (english)">see platano.ga's public analytics</a>
-       (no sensitive data here :D)
-      <br>
-      <a target="_blank" href="https://bit.ly/3H7BXLB" class="umami paypal-donate-link" data-event-name="paypal donate link (english)">new! donate to platano.ga with paypal</a>
-      <br>
-      <a target="_blank" href="/crypto" class="umami crypto-donate-link" data-event-name="crypto donate link (english)">donate to platano.ga with crypto</a>
-      <br>
-      and, more importantly, <a target="_blank" href="https://donate.unhcr.org/int/en/ukraine-emergency" class="umami ukraine-donate-link" data-event-name="ukraine donate link (english)">donate to the unhcr to help people in ukraine</a>
-    </span>
-    <script>
-      if (navigator.language.startsWith("it")) {
-        document.querySelector(".footer").innerHTML = `creato da <a target="_blank" href="https://linktr.ee/francescorosi" class="umami linktree" data-event-name="linktree (italiano)">francesco rosi</a>
-        <br>
-        <a target="_blank" href="https://replit.com/@FrancescoRosi/platanoga" class="umami source-code" data-event-link="codice sorgente (italiano)">codice sorgente</a>
-        <br>
-        <a class="customplatanolink" href="#">crea una pagina platano personalizzata</a>
-        <br>
-        <div class="hidden">
-          <input type="text" placeholder="nome di platano">
-          <input type="checkbox"> è speciale? 
-          <button class="umami create-btn" data-event-link="pagina platano personalizzata (italiano)">crea</button>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>platano (.ga)</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Inter:400,500,600,700);
+            * {
+                font-family: "Inter", sans-serif;
+            }
+            html, body {
+                overflow: hidden;
+                height: 100%;
+            }
+            :root {
+                --bad-idea: none;
+            }
+            @media screen and (pointer: coarse) {
+                .gud-footer {
+                    z-index: -1 !important;
+                }
+                a:not(.vercel) {
+                    pointer-events: var(--bad-idea) !important;
+                }
+            }
+            .gud-footer {
+                position: absolute;
+                transition: 0.4s opacity;
+                opacity: 0;
+                width: calc(100vw - 3rem);
+                max-width: 631px;
+                max-height: 497px;
+                /* effetto epico di https://css.glass */
+                background: rgba(255, 255, 255, 0.54);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(9px);
+                -webkit-backdrop-filter: blur(9px);
+                border: 1px solid rgba(255, 255, 255, 0.76);
+                z-index: 1;
+            }
+            a:hover {
+                font-weight: 700;
+                color: black;
+            }
+            a, span {
+                color: black;
+            }
+            span:first-of-type {
+                border-top: none;
+            }
+            a:last-of-type:not(.vercel) {
+                border-bottom: none;
+            }
+            a:not(div > span > a, .vercel), span {
+                border-bottom: 0.25px solid rgb(255 255 255 / 31.25%);
+                border-top: 0.25px solid rgb(255 255 255 / 31.25%);
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+            }
+            a {
+                font-weight: 400;
+                transition: .25s font-weight ease;
+                text-decoration: underline;
+            }
+            .visible {
+                opacity: 1;
+                z-index: 1 !important;
+            }
+            .vercel {
+                position: absolute;
+                bottom: 1rem;
+            }
+            .vercel img {
+                height: 48px;
+            }
+            .gud-footer div {
+                max-height: calc(497px - 1.5rem);
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body class="has-background-black has-text-white is-flex is-justify-content-center is-align-items-center px-5 py-6">
+        <img src="platano.png" alt="banana">
+        <div class="gud-footer m-auto px-5 py-3">
+            <div class="has-text-centered is-size-5 is-flex is-flex-direction-column">
+                <span>creato da <a href="https://francescoro.si">Francesco Rosi</a></span>
+                <a href="https://github.com/FrancescoRosi/platano.ga" target="_blank">codice sorgente</a>
+                <a onclick="alert(`lol non l'ho mai implementata questa funzione nel sito nuovo`)">crea una pagina platano personalizzata</a>
+                <a href="https://platano.ga/video" target="_blank">guarda il "nuovissimo" video platano su platano.ga/video</a>
+                <!-- <a>segui il profilo tiktok di platano.ga (attenzione: cringe)</a> -->
+                <!-- <a>guarda le analitiche pubbliche di platano.ga (niente dati sensibili qui :D)</a> -->
+                <span>dona a platano.ga con <a href="https://paypal.com/FrancescoRosi27" target="_blank">PayPal</a> o <a href="/crypto" target="_blank">criptovalute</a></span>
+                <span>oppure, anche meglio, <a href="https://www.gofundme.com/it-it/discover" target="_blank">dona a qualche iniziativa su GoFundMe</a></span>
+                <a class="is-size-6" href="https://old.platano.ga" target="_blank">ritorna alla versione vecchia di platano.ga</a>
+            </div>
         </div>
-        <a href="https://href.li/?https://platano.ga/video" class="umami video-link" data-event-link="video (italiano)">guarda il nuovissimo video platano su platano.ga/video</a>
-        <br>
-        <a href="https://tiktok.com/@platano.ga" target="_blank" class="umami tiktok-link" data-event-link="profilo tiktok (italiano)">segui il profilo tiktok di platano.ga</a>
-        <span title="su questo profilo, posto video cringe, tutto solamente per promuovere il mio sito. per favore capisci; questo è l'unico modo per promuovere la mia roba su tiktok."> (attenzione: cringe)</span>
-        <br>
-        <a href="https://umami-zeta-ten.vercel.app/share/FGvAac9d/platano.ga" target="_blank" class="umami analytics-link" data-event-name="link analitiche pubbliche (italiano)">guarda le analitiche pubbliche di platano.ga</a>
-         (niente dati sensibili qui :D)
-        <br>
-        <a target="_blank" href="https://bit.ly/3H7BXLB" class="umami paypal-donate-link" data-event-name="link donazione paypal (italiano)">nuovo! dona a platano.ga con paypal</a>
-        <br>
-        <a target="_blank" href="/crypto" class="umami crypto-donate-link" data-event-name="link donazione crypto (italiano)">dona a platano.ga con criptovalute</a>
-        <br>
-        e, soprattutto, <a target="_blank" href="https://donate.unhcr.org/int/en/ukraine-emergency" class="umami ukraine-donate-link" data-event-name="link donazione ucraina (italiano)">dona all'unhcr per aiutare le persone in ucraina</a>`
-      }
-      document.querySelector(".customplatanolink").addEventListener("click", () => {
-        document.querySelector("div").classList.remove("hidden");
-      });
-      document.querySelector("button").addEventListener("click", () => {
-        if (document.querySelector("input[type=\"text\"]").value != null) {
-          name = document.querySelector("input[type=\"text\"]").value;
-        }
-        if (document.querySelector("input[type=\"checkbox\"]").checked) {
-          window.location.href = `/custom?name=${name}&special`;
-        } else {
-          window.location.href = `/custom?name=${name}`;
-        }
-      });
-      if (window.location.search === "?nolinktree") {
-        document.querySelector(".linktree").outerHTML = "francesco rosi";
-        window.history.pushState({}, document.title, window.location.pathname);
-      }
-    </script>
-  </body>
+        <a class="vercel" href="https://vercel.com" target="_blank"><img src="/vercel.svg" alt="powered by vercel"></a>
+        <script>
+            const platanoimage = document.querySelector("img");
+            const footer       = document.querySelector(".gud-footer");
+            const visiblelinks = document.querySelector("#visible-links");
+
+            if (window.matchMedia("(pointer: coarse)").matches) {
+                platanoimage.addEventListener("touchstart", e => {
+                    footer.classList.add("visible");
+                    setTimeout(() => { document.documentElement.style.setProperty("--bad-idea", "initial"); }, 400);
+                });
+            } else {
+                footer.addEventListener("mouseover", e => {
+                    if (e.target.matches(":hover")) {
+                        footer.classList.add("visible");
+                    };
+                });
+                footer.addEventListener("mouseout", e => {
+                    if (!e.target.matches(":hover")) {
+                        footer.classList.remove("visible");
+                    };
+                });
+            };
+        </script>
+    </body>
 </html>
