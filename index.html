@@ -16,6 +16,12 @@
             font-family: "Nohemi";
             src: url(NOHEMI-VF.TTF);
         }
+        @keyframes slide-in {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
         .hidden {
             display: none !important;
         }
@@ -38,7 +44,7 @@
             padding: 1rem;
         }
         img {
-            width: 75%;
+            width: 90%;
             height: auto;
             margin-bottom: 1rem;
         }
@@ -55,6 +61,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            margin-bottom: 2rem;
         }
         #countdown > div:not(.comma) {
             display: flex;
@@ -68,6 +75,53 @@
             align-items: center;
             font-family: "IBM Plex Mono";
             font-size: 2rem;
+        }
+        a {
+            font-family: "Nohemi";
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            background: white;
+            color: black;
+            padding: 0.5rem 1rem;
+            pointer-events: all;
+            text-decoration: none;
+        }
+        .nuovo {
+            background: red;
+            color: white;
+            width: max-content;
+            padding: 0.5rem 1rem 0.25rem 1rem;
+            margin: -1rem;
+            align-items: center;
+            display: flex;
+            height: 1.8125rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        .slide-in {
+            transform: translateX(-1vw);
+            opacity: 0;
+            animation: slide-in 500ms ease-in-out 2s forwards;
+        }
+        @media screen and (max-width: 676px) {
+            a {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nuovo {
+                background: red;
+                color: white;
+                padding: 0.75rem 1rem 0.25rem 1rem;
+                margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+                width: 100%;
+                justify-content: center;
+                display: flex;
+                height: 1.8125rem;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
         }
     </style>
     <title>platano (.ga)</title>
@@ -100,6 +154,10 @@
             <div class="text">secondi</div>
         </div>
     </div>
+    <a href="https://new.platano.ga" target="_blank" class="slide-in">
+        <div class="nuovo">NUOVO</div>
+        visita il redesign pre-platanonet di platano.ga
+    </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js" integrity="sha512-dUlSLLkxslGILhPdCkALwk4szPhp3xmZIKFtlUD+O9Lslq41Aksmdt5OGqpomDoT4FsCUH70jQU8ezZHI3v1RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         const end = luxon.DateTime.fromISO("2024-06-15T18:14:54.367301Z");
