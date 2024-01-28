@@ -1,2 +1,2 @@
-# platano.ga (versione preistorica)
-La versione "vecchia" di platano.ga, scritta con il codice JavaScript peggiore in tutto il mondo.
+# platano.ga (versione "nuova")
+La versione "nuova" di platano.ga, sempre scritta con il codice JavaScript peggiore in tutto il mondo, ma questa volta sul server. Ebbene sì, questa nuova versione doveva essere una serverless function su Vercel. Infatti sotto c'è scritto "powered by Vercel", anche se non ho mai scritto il codice per la serverless function, e infatti il codice per questa repo è hostato in modo statico da Netlify lmao
